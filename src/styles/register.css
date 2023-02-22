@@ -67,3 +67,70 @@ html {
     font-size: 1.1rem;
     color: white;
 }
+
+.register-form-password-reminder {
+    color: #E91E63;
+    padding: 1rem;
+    font-size: 0.8rem;
+}
+
+.register-form-password-reminder:hover {
+    text-decoration: underline;
+}
+
+.register-to-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.register-to-login-link {
+    text-decoration: none;
+    color: #E91E63;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-to-login-link:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+    .register-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 3rem;
+        background-color: #555353;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        border-radius: 0.5rem;
+    }
+
+    .register-form-header {
+        font-size: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .register-form-submit {
+        width: 90%;
+    }
+
+    .register-form-input {
+        width: 90%;
+    }
+
+    .register-form-submit {
+        background-color: #E91E63;
+        color: aliceblue;
+    }
+}
