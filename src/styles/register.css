@@ -99,6 +99,12 @@ html {
     text-decoration: underline;
 }
 
+.register-form-feedback {
+    padding: 1rem;
+    color: #E91E63;
+    font-size: 0.8rem;
+}
+
 @media screen and (max-width: 600px) {
     .register-form {
         display: flex;
