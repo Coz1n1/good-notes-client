@@ -26,7 +26,6 @@ export default function Register() {
             })
         } else {
             setCom('fill in all blanks')
-            console.log('fill in all blanks')
         }
     }
 
