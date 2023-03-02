@@ -13,11 +13,10 @@ export default function Navbar() {
         <>
             <nav className='navbar'>
                 <div className='navbar-header'>
-                    <div className='navbar-header-icon'>
-                        <SlNote />
-                    </div>
                     <div className='navbar-header-title'>
-                        <NavLink to='/' className='navbar-header-title-content'>Good Notes</NavLink>
+                        <NavLink to='/' className={({ isActive }) =>
+                            "navbar-header-title-content" + (isActive ? " activated" : "")
+                        }><SlNote className='navbar-header-icon' />Good Notes</NavLink>
                     </div>
                 </div>
                 <div className='navbar-mobile-menu-icon' onClick={handleClick}>

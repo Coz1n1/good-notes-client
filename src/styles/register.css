@@ -105,6 +105,12 @@ html {
     font-size: 0.8rem;
 }
 
+.register-form-valid-text {
+    font-size: 1.2rem;
+    color: #E91E63;
+    font-weight: bold;
+}
+
 @media screen and (max-width: 600px) {
     .register-form {
         display: flex;
