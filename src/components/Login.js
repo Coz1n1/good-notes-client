@@ -3,14 +3,17 @@ import Navbar from './Navbar'
 import '../styles/login.css'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { AiOutlineRight } from 'react-icons/ai'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import Axios from 'axios'
+import { AuthContext } from '../helpers/AuthContext'
 
 export default function Login() {
     const [response, setResponse] = useState('')
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const navigate = useNavigate()
+    const { setProfileName } = useContext(AuthContext)
+    Axios.defaults.withCredentials = true
 
     const loginSubmit = () => {
         if (username !== '' && password !== '') {
@@ -22,9 +25,10 @@ export default function Login() {
             ).then((response) => {
                 console.log(response.data)
                 if (!response.data.err) {
-                    //navigate("/authorized")
-                    console.log('ok')
-                    localStorage.setItem('accessToken', response.data)
+                    console.log(response.data.username)
+                    localStorage.setItem('accessToken', response.data.accessToken)
+                    setProfileName(response.data.username)
+                    navigate("/")
                 } else {
                     setResponse(response.data.err)
                 }

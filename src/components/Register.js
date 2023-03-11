@@ -15,6 +15,7 @@ export default function Register() {
     const [com, setCom] = useState('')
     const [validError, setValidError] = useState('')
     const [isEmailValid, setIsEmailValid] = useState(false)
+    Axios.defaults.withCredentials = true
 
     function isValid(email) {
         return /\S+@\S+\.\S+/.test(email);
