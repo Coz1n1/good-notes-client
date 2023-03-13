@@ -41,7 +41,7 @@ export default function Navbar(props) {
                     {authState ?
                         <>
                             <li className='navbar-item'>
-                                <NavLink to='/about' className={({ isActive }) =>
+                                <NavLink to='/mynotes' className={({ isActive }) =>
                                     "navbar-link" + (isActive ? " activated" : "")
                                 }>MyNotes</NavLink>
                             </li>

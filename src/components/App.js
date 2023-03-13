@@ -4,8 +4,11 @@ import Login from './Login';
 import Register from './Register';
 import About from './About';
 import Auth from './Auth';
+import MyNotes from './MyNotes';
+import AddNote from './AddNote';
 import { AuthContext } from "../helpers/AuthContext"
 import { useState } from 'react';
+
 function App() {
   const [profileName, setProfileName] = useState('')
   return (
@@ -17,6 +20,8 @@ function App() {
             <Route path='/login' element={<Login />}></Route>
             <Route path='/register' element={<Register />}></Route>
             <Route path='/about' element={<About />}></Route>
+            <Route path='/mynotes' element={<MyNotes name={profileName} />}></Route>
+            <Route path='/mynotes/addnote' element={<AddNote name={profileName} />}></Route>
             <Route path='/' element={<Auth name={profileName} />}></Route>
           </Routes>
         </Router>
