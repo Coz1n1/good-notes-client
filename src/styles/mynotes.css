@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+}
+
+.all-notes-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.addnote-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    width: 5rem;
+    height: 2.5rem;
+    border-radius: 25px;
+    background-color: lime;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.addnote-button:hover {
+    filter: drop-shadow(0 0 0.4rem rgb(137, 207, 116));
+}

@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Axios from 'axios'
 import Note from './Note'
+import '../styles/mynotes.css'
+import {AiOutlinePlus} from 'react-icons/ai'
 
 export default function MyNotes(props) {
     const [allNotes, setAllNotes] = useState([])
@@ -20,9 +22,9 @@ export default function MyNotes(props) {
         Axios.post('http://localhost:3002/getAll', {
             username: username,
         }).then((response) => {
-            console.log(response.data.rows)
+            console.log(response.data.rows.length)
             setAllNotes(response.data.rows.map((e) =>
-                <Note key={e.id} title={e.title} text={e.text} date={e.date} />
+                <Note key={e.id} title={e.title} text={e.text} date={e.date} identity={e.id}/>
             ))
         })
     }, [props.name, username])
@@ -30,8 +32,8 @@ export default function MyNotes(props) {
     return (
         <>
             <Navbar user={props.name} />
-            <div>{allNotes}</div>
-            <button onClick={addNote}>AddNote</button>
+            <div className='all-notes-display'>{allNotes}</div>
+            <button onClick={addNote} className='addnote-button'><AiOutlinePlus/></button>
         </>
     )
 }
