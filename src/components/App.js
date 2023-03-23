@@ -7,10 +7,15 @@ import Auth from './Auth';
 import MyNotes from './MyNotes';
 import AddNote from './AddNote';
 import { AuthContext } from "../helpers/AuthContext"
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
   const [profileName, setProfileName] = useState('')
+
+  useEffect(()=> {
+    if(localStorage.getItem("accessToken")){
+    }
+  }, [])
   return (
     <>
       <AuthContext.Provider value={{ profileName, setProfileName }}>

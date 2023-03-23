@@ -13,7 +13,6 @@ export default function MyNotes(props) {
     const navigate = useNavigate()
 
     const addNote = () => {
-        console.log('add')
         navigate('/mynotes/addnote')
     }
 
@@ -23,8 +22,8 @@ export default function MyNotes(props) {
             username: username,
         }).then((response) => {
             console.log(response.data.rows.length)
-            setAllNotes(response.data.rows.map((e) =>
-                <Note key={e.id} title={e.title} text={e.text} date={e.date} identity={e.id}/>
+            setAllNotes(response.data.rows.map((e, key) =>
+                <Note key={key} title={e.title} text={e.text} date={e.date} identity={e.id}/>
             ))
         })
     }, [props.name, username])
