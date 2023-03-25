@@ -12,11 +12,11 @@ html {
     align-items: center;
     flex-direction: column;
     margin-top: 3rem;
-    background-color: #555353;
     margin-left: auto;
     margin-right: auto;
     width: 30rem;
     border-radius: 0.5rem;
+    border: 2px solid purple;
 }
 
 .register-form-header {
@@ -26,7 +26,6 @@ html {
     font-size: 3rem;
     padding: 1rem;
     width: 30rem;
-    background-color: #E91E63;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     color: white;

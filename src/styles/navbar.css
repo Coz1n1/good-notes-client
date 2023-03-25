@@ -6,15 +6,15 @@
 
 html {
     font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar {
-    background-color: #E91E63;
-    height: 5rem;
+    height: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    font-size: 2rem;
+    font-size: 1.2rem;
 }
 
 .navbar-menu {
@@ -56,7 +56,7 @@ html {
     align-items: center;
     padding: 0.5rem;
     color: black;
-    height: 5rem;
+    height: 4rem;
 }
 
 .navbar-link {
@@ -65,7 +65,7 @@ html {
     align-items: center;
     text-decoration: none;
     padding: 0.5rem;
-    height: 5rem;
+    height: 4rem;
 }
 
 .activated {

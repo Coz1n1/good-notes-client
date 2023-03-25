@@ -57,17 +57,17 @@ export default function Navbar(props) {
                             <li className='navbar-item'>
                                 <NavLink to='/login' className={({ isActive }) =>
                                     "navbar-link" + (isActive ? " activated" : "")
-                                }>Login</NavLink>
+                                }>LOGIN</NavLink>
                             </li>
                             <li className='navbar-item' >
                                 <NavLink to='/register' className={({ isActive }) =>
                                     "navbar-link" + (isActive ? " activated" : "")
-                                }>Register</NavLink>
+                                }>REGISTER</NavLink>
                             </li>
                             <li className='navbar-item'>
                                 <NavLink to='/about' className={({ isActive }) =>
                                     "navbar-link" + (isActive ? " activated" : "")
-                                }>About</NavLink>
+                                }>ABOUT</NavLink>
                             </li>
                         </>
                     }
