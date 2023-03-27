@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../styles/navbar.css'
 import { SlNote } from 'react-icons/sl'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
-import { RxAvatar } from 'react-icons/rx'
 
 export default function Navbar(props) {
     const [click, setClick] = useState(false)
@@ -48,9 +47,9 @@ export default function Navbar(props) {
                             <li className='navbar-item'>
                                 <NavLink to='/profile' className={({ isActive }) =>
                                     "navbar-link" + (isActive ? " activated" : "")
-                                }><RxAvatar />{props.user}</NavLink>
+                                }><div className='avatar'>{props.user[0]}</div>{props.user}</NavLink>
                             </li>
-                            <button onClick={logout}>Logout</button>
+                            <button className='logout-button' onClick={logout}>Logout</button>
                         </>
                         :
                         <>

@@ -40,10 +40,9 @@ export default function Login() {
 
     return (
         <>
-            <div className='login-container'>
                 <Navbar />
                 <div className='login-form'>
-                    <div className='login-form-header'>Login</div>
+                    <div className='login-form-header'>Log in</div>
                     <div className='login-form-label'>Username: </div>
                     <input type='text' placeholder='Enter your username...' className='login-form-input' onChange={(e) => setUsername(e.target.value)}></input>
                     <div className='login-form-label'>Password: </div>
@@ -52,7 +51,6 @@ export default function Login() {
                     <button onClick={loginSubmit} className='login-form-submit'>Login</button>
                 </div>
                 <div className='login-to-register'>Don't have an account?<NavLink to='/register' className='login-to-register-link'>Register here<AiOutlineRight /></NavLink></div>
-            </div>
         </>
     )
 }

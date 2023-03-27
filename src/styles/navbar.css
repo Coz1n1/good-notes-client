@@ -10,11 +10,11 @@ html {
 }
 
 .navbar {
-    height: 4rem;
+    height: 3.5rem;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
 }
 
 .navbar-menu {
@@ -31,22 +31,34 @@ html {
 }
 
 .navbar-header-icon {
-    font-size: 3.5rem;
+    font-size: 2.7rem;
     font-weight: bold;
 }
 
 .navbar-header-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     font-family: fantasy;
 }
 
 .navbar-header-title-content {
-    color: black;
+    color: aliceblue;
     display: flex;
     align-items: center;
     text-decoration: none;
-    height: 5rem;
+    height: 3.5rem;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(94, 31, 94);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50px;
+    margin-right: 0.2rem;
+    border: 3px solid rgb(139, 42, 151);
 }
 
 .navbar-item {
@@ -56,25 +68,41 @@ html {
     align-items: center;
     padding: 0.5rem;
     color: black;
-    height: 4rem;
+    height: 3.5rem;
 }
 
 .navbar-link {
-    color: black;
+    color: aliceblue;
     display: flex;
     align-items: center;
     text-decoration: none;
     padding: 0.5rem;
-    height: 4rem;
+    height: 3.5rem;
 }
 
 .activated {
-    color: white;
-    border-bottom: 5px solid white;
+    border-bottom: 5px solid aliceblue;
 }
 
 .navbar-mobile-menu-icon {
     display: none;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout-button {
+    width: 6rem;
+    height: 2rem;
+    margin-right: 1rem;
+    background-color: rgb(96, 14, 143);
+    border: none;
+    border-radius: 10px;
+    color: aliceblue;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 960px) {

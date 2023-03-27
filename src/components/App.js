@@ -6,6 +6,7 @@ import About from './About';
 import Auth from './Auth';
 import MyNotes from './MyNotes';
 import AddNote from './AddNote';
+import Profile from './Profile';
 import { AuthContext } from "../helpers/AuthContext"
 import { useState, useEffect } from 'react';
 
@@ -28,6 +29,7 @@ function App() {
             <Route path='/mynotes' element={<MyNotes name={profileName} />}></Route>
             <Route path='/mynotes/addnote' element={<AddNote name={profileName} />}></Route>
             <Route path='/' element={<Auth name={profileName} />}></Route>
+            <Route path='/profile' element={<Profile name={profileName}/>}></Route>
           </Routes>
         </Router>
       </AuthContext.Provider>
