@@ -14,39 +14,45 @@ html {
     margin-top: 3rem;
     margin-left: auto;
     margin-right: auto;
-    width: 30rem;
+    width: 23rem;
     border-radius: 0.5rem;
-    border: 2px solid purple;
+    background-color: rgba(8, 7, 7, 0.06);
 }
 
 .login-form-header {
-    font-size: 3rem;
-    width: 30rem;
+    font-size: 1.3rem;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
     border-top-right-radius: 0.5rem;
     border-top-left-radius: 0.5rem;
+    margin-bottom: 1rem;
     color: white;
     padding: 0.5rem;
 }
 
 .login-form-label {
     color: whitesmoke;
-    padding: 0.5rem;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
 }
 
 .login-form-input {
-    width: 20rem;
+    width: 17rem;
     height: 2rem;
     border: none;
     font-size: 0.7rem;
+    padding: 0.5rem;
     background-color: transparent;
-    margin: 0.5rem;
+    margin-bottom: 1.5rem;
     border-radius: 0.25rem;
-    border: 1px solid #b46cf8;
+    border: none;
+    border-bottom: 2px solid #b46cf8;
     color: white;
+}
+
+.login-form-input:focus {
+    outline: none;
 }
 
 .login-form-submit {
@@ -67,7 +73,9 @@ html {
 }
 
 .login-form-feedback {
-    color: rgb(201, 70, 70);
+    color: #db094f;
+    font-weight: bold;
+    font-size: 0.9rem;
 }
 
 .login-to-register {
@@ -86,4 +94,8 @@ html {
     align-items: center;
     text-decoration: none;
     color: #ee26dd;
+}
+
+.login-to-register-link:hover {
+    text-decoration: underline;
 }

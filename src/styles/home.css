@@ -8,6 +8,7 @@ html {
 
 body {
     background: linear-gradient(-45deg, #9008b3, #6e1860, #501646, #050505);
+    overflow: hidden;
 }
 
 .main {
@@ -54,11 +55,29 @@ body {
     }
 }
 
+
+@keyframes slidingLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
 .main-screen {
     display: flex;
     flex-direction: row;
     margin-top: 0.2rem;
     font-size: 40pt;
+    animation: 1s slidingLeft;
+    animation-fill-mode: forwards;
+    animation-delay: 2.5s;
+    visibility: hidden;
 }
 
 .main-screen h2 {
@@ -67,13 +86,13 @@ body {
 }
 
 .main-image {
-    width: 28rem;
-    height: 25rem;
+    width: 24rem;
+    height: 22rem;
 }
 
 .main-image-propers {
-    width: 28rem;
-    height: 25rem;
+    width: 24rem;
+    height: 22rem;
 }
 
 .main-screen-headers {
@@ -84,6 +103,18 @@ h2:hover {
     color: white;
 }
 
+@keyframes slidingRight {
+    0% {
+        transform: translateX(+100%);
+        opacity: 0;
+    }
+    100% {
+        transform: (translateX(0));
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
 .main-footer {
     display: flex;
     flex-direction: row;
@@ -92,6 +123,10 @@ h2:hover {
     width: 40rem;
     font-size: 1rem;
     color: white;
+    animation: 1s slidingRight;
+    animation-fill-mode: forwards;
+    animation-delay: 2.5s;
+    visibility: hidden;
 }
 
 .sign {
