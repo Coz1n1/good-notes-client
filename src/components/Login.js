@@ -1,11 +1,11 @@
 import React from 'react'
-import Navbar from './Navbar'
 import '../styles/login.css'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { AiOutlineRight } from 'react-icons/ai'
 import { useState, useContext } from 'react'
 import Axios from 'axios'
 import { AuthContext } from '../helpers/AuthContext'
+import {IoMdReturnLeft} from 'react-icons/io'
 
 export default function Login() {
     const [response, setResponse] = useState('')
@@ -14,6 +14,10 @@ export default function Login() {
     const navigate = useNavigate()
     const { setProfileName } = useContext(AuthContext)
     Axios.defaults.withCredentials = true
+
+    const backButton = () => {
+        navigate("/")
+    }
 
     const loginSubmit = () => {
         if (username !== '' && password !== '') {
@@ -28,7 +32,7 @@ export default function Login() {
                     console.log(response.data.username)
                     localStorage.setItem('accessToken', response.data.accessToken)
                     setProfileName(response.data.username)
-                    navigate("/")
+                    navigate("/home")
                 } else {
                     setResponse(response.data.err)
                 }
@@ -40,7 +44,9 @@ export default function Login() {
 
     return (
         <>
-                <Navbar />
+                <div className='login-back'>
+                <IoMdReturnLeft className='login-back-icon' onClick={backButton}/>
+                </div>
                 <div className='login-form'>
                     <div className='login-form-header'>Log in</div>
                     <div className='login-form-label'>Username: </div>

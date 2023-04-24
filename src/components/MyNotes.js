@@ -7,6 +7,7 @@ import Note from './Note'
 import '../styles/mynotes.css'
 import {AiOutlinePlus} from 'react-icons/ai'
 import {BsSearch} from 'react-icons/bs'
+import {IoMdReturnLeft} from 'react-icons/io'
 
 export default function MyNotes(props) {
     const [allNotes, setAllNotes] = useState([])
@@ -33,6 +34,10 @@ export default function MyNotes(props) {
         }
     }
 
+    const backButton = () => {
+        navigate("/home")
+    }
+
     useEffect(() => {
         setUsername(props.name)
         Axios.post('http://localhost:3002/getAll', {
@@ -46,14 +51,15 @@ export default function MyNotes(props) {
     return (
         <>
             <Navbar user={props.name} />
-            <div className='a'>          
-            <button onClick={addNote} className='addnote-button'><AiOutlinePlus className='addnote-icon'/></button>
+            <div className='a'>
+            <IoMdReturnLeft className='notes-back-icon' onClick={backButton}/>
             <div className='searchbar'>
                 <input type='text' placeholder='Search...' className='searchbar-input' onChange={handleFilter}></input>
                 <div className='searchbar-icon'>
                     <BsSearch/>
                 </div>
             </div>
+            <button onClick={addNote} className='addnote-button'><AiOutlinePlus className='addnote-icon'/></button>
             </div>  
             <div>
                 {search ? 

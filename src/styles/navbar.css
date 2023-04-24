@@ -24,6 +24,11 @@ html {
     gap: 2rem;
 }
 
+.nav-home {
+    color: white;
+    cursor: pointer;
+}
+
 .navbar-header {
     display: flex;
     justify-content: center;

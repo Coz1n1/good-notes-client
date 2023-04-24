@@ -11,7 +11,7 @@ export default function Profile(props) {
     const navigate = useNavigate('')
 
     const backButton = () => {
-        navigate("/")
+        navigate("/home")
     }
 
     useEffect(()=> {

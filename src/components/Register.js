@@ -1,10 +1,11 @@
 import React from 'react'
-import Navbar from './Navbar'
 import '../styles/register.css'
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { AiOutlineRight, AiOutlineEyeInvisible, AiOutlineEye, AiOutlineQuestionCircle } from 'react-icons/ai'
 import Axios from 'axios'
+import {IoMdReturnLeft} from 'react-icons/io'
+
 
 export default function Register() {
 
@@ -15,6 +16,7 @@ export default function Register() {
     const [com, setCom] = useState('')
     const [validError, setValidError] = useState('')
     const [isEmailValid, setIsEmailValid] = useState(false)
+    const navigate = useNavigate()
     Axios.defaults.withCredentials = true
 
     function isValid(email) {
@@ -35,6 +37,10 @@ export default function Register() {
         setEmail(e.target.value)
     }
 
+    const backButton = () => {
+        navigate("/")
+    }
+
     const registerSubmit = () => {
         console.log(username + ' ' + password + ' ' + email)
         if (username !== '' && password !== '' && email !== '' && confirm !== '') {
@@ -52,7 +58,7 @@ export default function Register() {
                     setCom('invalid email')
                 }
             } else {
-                alert('Incorrect password')
+                setCom('Incorrect password')
             }
         } else {
             setCom('fill in all blanks')
@@ -61,7 +67,9 @@ export default function Register() {
 
     return (
         <>
-            <Navbar />
+            <div className='reg-back'>
+                <IoMdReturnLeft className='reg-back-icon' onClick={backButton}/>
+            </div>
             <div className='register-form'>
                 <div className='register-form-header'>Create an account<AiOutlineQuestionCircle /></div>
                 <div className='register-form-input-label'>Username: </div>

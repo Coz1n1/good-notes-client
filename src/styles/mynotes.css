@@ -42,10 +42,17 @@ html {
     border: none;
     font-size: 1.2rem;
     color: white;
+    margin-left: 1rem;
 }
 
 .addnote-button:hover {
     filter: drop-shadow(0 0 0.5rem rgb(190, 169, 110));
+    cursor: pointer;
+}
+
+.notes-back-icon {
+    font-size: 2rem;
+    color: aliceblue;
     cursor: pointer;
 }
 

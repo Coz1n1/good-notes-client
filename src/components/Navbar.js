@@ -29,7 +29,7 @@ export default function Navbar(props) {
             <nav className='navbar'>
                 <div className='navbar-header'>
                     <div className='navbar-header-title'>
-                        <NavLink to='/home' className={({ isActive }) =>
+                        <NavLink to='/' className={({ isActive }) =>
                             "navbar-header-title-content" + (isActive ? " activated" : "")
                         }><SlNote className='navbar-header-icon' />Good Notes</NavLink>
                     </div>
@@ -40,6 +40,11 @@ export default function Navbar(props) {
                 <ul className={click ? 'navbar-menu active' : 'navbar-menu'}>
                     {authState ?
                         <>
+                            <li className='navbar-item'>
+                                <NavLink to='/mytasks' className={({ isActive }) =>
+                                    "navbar-link" + (isActive ? " activated" : "")
+                                }>MyTasks</NavLink>
+                            </li>
                             <li className='navbar-item'>
                                 <NavLink to='/mynotes' className={({ isActive }) =>
                                     "navbar-link" + (isActive ? " activated" : "")
@@ -65,14 +70,10 @@ export default function Navbar(props) {
                                 }>Register</NavLink>
                             </li>
                             <li className='navbar-item'>
-                                <Link to='about' spy={true} smooth={true} offset={-90} duration={500} className={({ isActive }) =>
-                                    "navbar-link" + (isActive ? " activated" : "")
-                                }>About</Link>
+                                <Link to='about' spy={true} smooth={true} offset={-90} duration={500} className="nav-home">About</Link>
                             </li>
                             <li className='navbar-item'>
-                                <Link to='contact' spy={true} smooth={true} offset={-90} duration={500} className={({ isActive }) =>
-                                    "navbar-link" + (isActive ? " activated" : "")
-                                }>Contact</Link>
+                                <Link to='contact' spy={true} smooth={true} offset={-90} duration={500} className="nav-home">Contact</Link>
                             </li>
                         </>
                     }

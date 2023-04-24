@@ -76,6 +76,19 @@ html {
     font-size: 0.8rem;
 }
 
+.login-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    color: aliceblue;
+    font-size: 2rem;
+}
+
+.login-back-icon {
+    cursor: pointer;
+}
+
 .login-form-submit:hover {
     background-color: lime;
     color: whitesmoke;
