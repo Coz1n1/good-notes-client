@@ -15,6 +15,7 @@ html {
     justify-content: space-between;
     align-items: stretch;
     font-size: 0.8rem;
+    width: 100%;
 }
 
 .navbar-menu {
@@ -59,6 +60,12 @@ html {
     border-radius: 50px;
     margin-right: 0.2rem;
     border: 3px solid rgb(139, 42, 151);
+}
+
+.menu-icon {
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 .navbar-item {
@@ -119,10 +126,11 @@ ul {
         left: -100%;
         opacity: 1;
         transition: all 0.5s ease;
+        font-size: 1.1rem;
     }
 
     .navbar-menu.active {
-        background: #232324;
+        background-color: rgb(107, 47, 97);
         left: 0;
         opacity: 1;
         transition: all 0.6s ease;

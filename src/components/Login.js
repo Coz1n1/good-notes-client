@@ -49,6 +49,7 @@ export default function Login() {
                     <input type='password' placeholder='Enter your password...' className='login-form-input' onChange={(e) => setPassword(e.target.value)}></input>
                     <div className='login-form-feedback'>{response}</div>
                     <button onClick={loginSubmit} className='login-form-submit'>Login</button>
+                    <div className='password-reminder'>Have you forgotten your password?</div>
                 </div>
                 <div className='login-to-register'>Don't have an account?<NavLink to='/register' className='login-to-register-link'>Register here<AiOutlineRight /></NavLink></div>
         </>

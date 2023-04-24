@@ -8,15 +8,10 @@ export default function Auth(props) {
 
     })
 
-    const handleClick = () => {
-
-    }
-
     return (
         <>
             <Navbar user={props.name} />
-            <button onClick={handleClick}>check</button>
-            <div>Auth</div>
+            <div></div>
         </>
     )
 }

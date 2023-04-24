@@ -1,0 +1,48 @@
+.addnote-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.back-icon {
+    font-size: 2.5rem;
+    color: aliceblue;
+    display: flex;
+    justify-content: flex-start;
+    width: 20rem;
+}
+
+.back:hover {
+    cursor: pointer;
+}
+
+.adding-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.adding-form-input {
+    width: 20rem;
+    margin-bottom: 1rem;
+}
+
+.adding-form-button {
+    width: 5rem;
+    border: none;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgb(184, 128, 24);
+    color: aliceblue;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.adding-form-button:hover {
+    filter: drop-shadow(0 0 0.75rem rgb(190, 169, 110));
+}

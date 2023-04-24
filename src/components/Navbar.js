@@ -3,6 +3,7 @@ import '../styles/navbar.css'
 import { SlNote } from 'react-icons/sl'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import { Link } from 'react-scroll'
 
 export default function Navbar(props) {
     const [click, setClick] = useState(false)
@@ -34,7 +35,7 @@ export default function Navbar(props) {
                     </div>
                 </div>
                 <div className='navbar-mobile-menu-icon' onClick={handleClick}>
-                    {click ? <FaTimes /> : <FaBars />}
+                    {click ? <FaTimes className='menu-icon'/> : <FaBars className='menu-icon'/>}
                 </div>
                 <ul className={click ? 'navbar-menu active' : 'navbar-menu'}>
                     {authState ?
@@ -64,9 +65,14 @@ export default function Navbar(props) {
                                 }>Register</NavLink>
                             </li>
                             <li className='navbar-item'>
-                                <NavLink to='/about' className={({ isActive }) =>
+                                <Link to='about' spy={true} smooth={true} offset={-90} duration={500} className={({ isActive }) =>
                                     "navbar-link" + (isActive ? " activated" : "")
-                                }>About</NavLink>
+                                }>About</Link>
+                            </li>
+                            <li className='navbar-item'>
+                                <Link to='contact' spy={true} smooth={true} offset={-90} duration={500} className={({ isActive }) =>
+                                    "navbar-link" + (isActive ? " activated" : "")
+                                }>Contact</Link>
                             </li>
                         </>
                     }

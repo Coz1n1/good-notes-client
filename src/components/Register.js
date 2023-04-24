@@ -75,7 +75,6 @@ export default function Register() {
                 <div className='register-form-valid-text'>{validError}</div>
                 <div className='register-form-feedback'>{com}</div>
                 <button onClick={registerSubmit} className='register-form-submit'>Register</button>
-                <div className='register-form-password-reminder'>Have you forgotten your password?</div>
             </div>
             <div className='register-to-login'>Already have an account?<NavLink to='/login' className='register-to-login-link'>Login<AiOutlineRight /></NavLink></div>
         </>

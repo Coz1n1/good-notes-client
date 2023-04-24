@@ -8,16 +8,28 @@ html {
 
 body {
     background: linear-gradient(-45deg, #9008b3, #6e1860, #501646, #050505);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     overflow: hidden;
 }
 
 .main {
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 100vh;
+}
+
+.about-section {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+.contact-section {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
 }
 
 .typing-content h1 {
@@ -85,14 +97,51 @@ body {
     -webkit-text-stroke: 2px black;
 }
 
-.main-image {
+.main-image-section {
     width: 24rem;
     height: 22rem;
+}
+
+.main-image-dot {
+    width: 6rem;
+    height: 6rem;
+    background-color: rgb(184, 88, 184, 0.2);
+    border-radius: 50%;
+    position: relative;
+    left: 50px;
+    animation: moving 2s linear infinite;
+}
+
+.main-image-dot2 {
+    width: 6rem;
+    height: 6rem;
+    background-color: rgb(117, 64, 110, 0.4);
+    border-radius: 50%;
+    position: relative;
+    left: 70%;
+    margin-top: 270px;
+    animation: moving 2s linear infinite;
 }
 
 .main-image-propers {
     width: 24rem;
     height: 22rem;
+    position: absolute;
+    animation:
+            moving 2s linear infinite;
+    bottom: 0;
+}
+
+@keyframes moving {
+
+    0%,
+    100% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 10px;
+    }
 }
 
 .main-screen-headers {

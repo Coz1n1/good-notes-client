@@ -25,7 +25,7 @@ function App() {
             <Route path='/home' element={<Home />}></Route>
             <Route path='/login' element={<Login />}></Route>
             <Route path='/register' element={<Register />}></Route>
-            <Route path='/about' element={<About />}></Route>
+            {/* <Route path='/about' element={<About />}></Route> */}
             <Route path='/mynotes' element={<MyNotes name={profileName} />}></Route>
             <Route path='/mynotes/addnote' element={<AddNote name={profileName} />}></Route>
             <Route path='/' element={<Auth name={profileName} />}></Route>

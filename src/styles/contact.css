@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-header {
+    color: wheat;
+    font-size: 2rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0.2rem;
+}
+
+.up {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: aliceblue;
+}
+
+label {
+    color: wheat;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+input {
+    width: 20rem;
+    border: none;
+    border-radius: 5px;
+    height: 2rem;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    color: rgb(184, 128, 24);
+}
+
+input:focus {
+    outline: 2px solid wheat;
+}
+
+.submit-button {
+    color: aliceblue;
+    width: 5rem;
+    height: 1.7rem;
+    margin-top: 1rem;
+    background-color: rgb(184, 128, 24);
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.submit-button:hover {
+    filter: drop-shadow(0 0 0.75rem rgb(190, 169, 110));
+    cursor: pointer;
+}
+
+.submit-button:active {
+    transform: translateX(5px);
+    
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.right {
+    width: 50%;
+    height: 100vh;
+}
+
+.all {
+    display: flex;
+    flex-direction: row;
+}
+
+textarea {
+    height: 5rem;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    color: wheat;
+    padding: 0.5rem;
+}
+
+textarea:focus {
+    outline: 2px solid wheat;
+}
+
+.feedback {
+    margin-top: 0.2rem;
+    color: aliceblue;
+}

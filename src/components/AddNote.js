@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Axios from 'axios'
+import '../styles/addnote.css'
+import {IoMdReturnLeft} from 'react-icons/io'
 
 export default function AddNote(props) {
     const [title, setTitle] = useState('')
@@ -27,11 +29,17 @@ export default function AddNote(props) {
 
     return (
         <>
-            <div>
-                <button onClick={back}>Back</button>
-                <input type='text' onChange={((e) => setTitle(e.target.value))}></input>
-                <input type='text' onChange={((e) => setContent(e.target.value))}></input>
-                <button onClick={addNote}>Add Your Note</button>
+            <div className='addnote-content'>
+                <div className='back-icon'>
+                <IoMdReturnLeft onClick={back} className='back'/>
+                </div>
+                <div className='adding-form'>
+                <label>Title</label>
+                <input type='text' onChange={((e) => setTitle(e.target.value))} className='adding-form-input'></input>
+                <label>Content</label>
+                <textarea onChange={((e) => setContent(e.target.value))} className='adding-form-input'></textarea>
+                <button onClick={addNote} className='adding-form-button'>Add Note</button>
+                </div>
             </div>
         </>
     )

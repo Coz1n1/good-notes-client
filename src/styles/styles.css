@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -7,8 +9,7 @@ html {
 }
 
 body {
-    background: linear-gradient(-45deg, #9008b3, #6e1860, #501646, #050505);;
+    background: linear-gradient(-45deg, #9008b3, #6e1860, #501646, #050505);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
-
-
-/*#E91E63 - czerwo good*/

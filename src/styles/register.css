@@ -70,16 +70,6 @@ html {
     color: white;
 }
 
-.register-form-password-reminder {
-    color: #ee26dd;
-    padding: 0.7rem;
-    font-size: 0.6rem;
-}
-
-.register-form-password-reminder:hover {
-    text-decoration: underline;
-}
-
 .register-to-login {
     display: flex;
     justify-content: center;

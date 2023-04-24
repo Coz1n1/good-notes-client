@@ -1,12 +1,14 @@
 import React from 'react'
 import Navbar from './Navbar'
 import '../styles/home.css'
+import About from './About'
+import Contact from './Contact'
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <div className='main'>
+      <div className='main' id='main'>
         <div className='typing-content'>
           <h1>Welcome to GoodNotes!</h1>
         </div>
@@ -17,8 +19,12 @@ export default function Home() {
             <h2>One</h2>
             <h2>Place</h2>
           </div>
-          <div className='main-image'>
-            <img className='main-image-propers' src={require('../images/note.png')} alt='image content'></img>
+          <div className='main-image-section'>
+            <div className='main-image-dot'>
+            </div>
+            <div className='main-image-dot2'>
+            </div>
+            <img className='main-image-propers' src={require('../images/note.png')} alt='content'></img>
           </div>
         </div>
         <div className='main-footer'>
@@ -26,6 +32,8 @@ export default function Home() {
           <h3>Hello, we are trying to improve your feeling about notes</h3>
         </div>
       </div>
+      <About/>
+      <Contact/>
     </>
   )
 }
