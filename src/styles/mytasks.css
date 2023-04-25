@@ -1,3 +1,87 @@
 .mytasks-content {
     height: 100vh;
 }
+
+.addtask-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.add-button {
+    width: 4rem;
+    height: 2rem;
+    margin-left: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(184, 128, 24);
+    font-size: 1rem;
+    color: aliceblue;
+}
+
+.add-button:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 0 0.5rem rgb(190, 169, 110));
+}
+
+.tasks-header {
+    color: wheat;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.all-tasks {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.added-task {
+    margin: 0.5rem;
+    width: 20rem;
+    background-color: aliceblue;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: aliceblue;
+}
+
+.task-name {
+    margin-left: 0.5rem;
+}
+
+.task-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.2rem;
+    width: 1rem;
+    border: 1px solid aliceblue;
+    border-radius: 5px;
+}
+
+.added-task-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 20rem;
+}
+
+.icon-props {
+    padding: 0.2rem;
+    color: wheat;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.icon-props:hover {
+    font-size: 1.5rem;
+    transition: 0.5s;
+}
