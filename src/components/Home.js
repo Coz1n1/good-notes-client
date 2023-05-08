@@ -29,7 +29,7 @@ export default function Home() {
         </div>
         <div className='main-footer'>
           <div className='sign'></div>
-          <h3>Hello, we are trying to improve your feeling about notes</h3>
+          <h3>Hello, enjoy your simple notes and daily task application</h3>
         </div>
       </div>
       <About/>
