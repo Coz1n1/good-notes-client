@@ -93,3 +93,13 @@ textarea:focus {
     margin-top: 0.2rem;
     color: aliceblue;
 }
+
+@media screen and (max-width: 550px) {
+    form {
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+    }
+}

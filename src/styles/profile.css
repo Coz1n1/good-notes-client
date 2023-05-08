@@ -6,7 +6,8 @@ html {
     font-size: 20pt;
 }
 
-.main {
+.profile-section {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,4 +89,14 @@ html {
     margin-top: 0.2rem;
     font-size: 0.7rem;
     color: rgba(180, 175, 175, 0.9);
+}
+
+@media screen and (max-width: 550px) {
+    .user-content {
+        width: 100%;
+    }
+
+    .h {
+        width: 100%;
+    }
 }

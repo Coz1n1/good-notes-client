@@ -71,7 +71,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    margin-top: 0.2rem;
 }
 
 .searchbar-input {
@@ -96,4 +96,25 @@ html {
 .notes-header {
     color: wheat;
     margin-left: 2rem;
+}
+
+@media screen and (max-width: 520px) {
+
+    .searchbar-input {
+        width: 8rem;
+        height: 1.5rem;
+    }
+
+    .searchbar-icon {
+        margin-left: 6rem;
+    }
+
+    .addnote-button {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .notes-header {
+        font-size: 1rem;
+    }
 }

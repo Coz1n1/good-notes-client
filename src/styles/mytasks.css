@@ -27,6 +27,22 @@
     filter: drop-shadow(0 0 0.5rem rgb(190, 169, 110));
 }
 
+.cancel-button {
+    width: 4rem;
+    height: 2rem;
+    margin-left: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(252, 204, 110);
+    font-size: 1rem;
+    color: aliceblue;
+}
+
+.cancel-button:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 0 0.5rem rgb(243, 222, 163));
+}
+
 .tasks-header {
     color: wheat;
     text-align: center;
@@ -72,6 +88,13 @@
     justify-content: flex-end;
     align-items: center;
     width: 20rem;
+}
+
+.no-tasks-header {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: rgb(125, 128, 131);
+    font-weight: bold;
 }
 
 .icon-props {

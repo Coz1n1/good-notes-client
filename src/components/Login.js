@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/login.css'
 import { NavLink, useNavigate } from 'react-router-dom'
-import { AiOutlineRight } from 'react-icons/ai'
+import { AiOutlineRight, AiOutlineEyeInvisible, AiOutlineEye, } from 'react-icons/ai'
 import { useState, useContext } from 'react'
 import Axios from 'axios'
 import { AuthContext } from '../helpers/AuthContext'
@@ -13,11 +13,21 @@ export default function Login() {
     const [password, setPassword] = useState('')
     const navigate = useNavigate()
     const { setProfileName } = useContext(AuthContext)
+    const [isVisible, setIsVisible] = useState(false)
     Axios.defaults.withCredentials = true
 
     const backButton = () => {
         navigate("/")
     }
+
+    const handleVisibility = () => {
+            let a = document.getElementById("password")
+            if(a.type === 'password'){
+                a.type = 'text'
+            }else if(a.type === 'text'){
+                a.type = 'password'
+            }
+        }
 
     const loginSubmit = () => {
         if (username !== '' && password !== '') {
@@ -52,7 +62,16 @@ export default function Login() {
                     <div className='login-form-label'>Username: </div>
                     <input type='text' placeholder='Enter your username...' className='login-form-input' onChange={(e) => setUsername(e.target.value)}></input>
                     <div className='login-form-label'>Password: </div>
-                    <input type='password' placeholder='Enter your password...' className='login-form-input' onChange={(e) => setPassword(e.target.value)}></input>
+                    <div className='pass-management'>
+                    <span className='eye-icon' onClick={()=>setIsVisible(!isVisible)}>
+                    {isVisible ?
+                            <AiOutlineEyeInvisible onClick={handleVisibility}/>
+                        :
+                            <AiOutlineEye onClick={handleVisibility}/>
+                    }
+                    </span>
+                    <input id='password' type='password' placeholder='Enter your password...' className='login-form-input' onChange={(e) => setPassword(e.target.value)}></input>
+                    </div>
                     <div className='login-form-feedback'>{response}</div>
                     <button onClick={loginSubmit} className='login-form-submit'>Login</button>
                     <div className='password-reminder'>Have you forgotten your password?</div>

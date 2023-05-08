@@ -122,3 +122,21 @@ html {
 .login-to-register-link:hover {
     text-decoration: underline;
 }
+
+@media screen and (max-width: 600px) {
+    .login-form {
+        width: 100%;
+    }
+
+    .login-form-submit {
+        width: 90%;
+    }
+
+    .login-form-input {
+        width: 90%;
+    }
+
+    .pass-management {
+        width: 90%;
+    }
+}

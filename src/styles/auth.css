@@ -1,0 +1,153 @@
+.auth-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-header {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: aliceblue;
+    margin-top: 1rem;
+}
+
+.welcome-header-user {
+    color: wheat;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-top: 1rem;
+}
+
+.left-content:hover {
+    cursor: pointer;
+}
+
+.right-content:hover {
+    cursor: pointer;
+}
+
+.left-content-header {
+    color: wheat;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-top: 1rem;
+}
+
+.all-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-content-img {
+    width: 15rem;
+    height: 15rem;
+}
+
+.left-content-img:hover {
+    width: 16rem;
+    height: 16rem;
+    transition: 1s;
+}
+
+.right-content-img:hover {
+    width: 16rem;
+    height: 16rem;
+    transition: 1s;
+}
+
+.right-content-img {
+    width: 15rem;
+    height: 15rem;
+}
+
+.right-content-header {
+    color: wheat;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+@keyframes bouncing {
+    0% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    70% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.bouncing {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: bouncing;
+}
+
+@media screen and (max-width: 800px) {
+    .left-content-img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .left-content-img:hover {
+        width: 11rem;
+        height: 11rem;
+        transition: 1s;
+    }
+
+    .right-content-img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .right-content-img:hover {
+        width: 11rem;
+        height: 11rem;
+        transition: 1s;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .all-content {
+        flex-direction: column;
+    }
+
+    .left-content {
+        width: 100%;
+    }
+
+    .right-content {
+        width: 100%;
+    }
+}

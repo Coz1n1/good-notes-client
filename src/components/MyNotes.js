@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import Axios from 'axios'
 import Note from './Note'
 import '../styles/mynotes.css'
-import {AiOutlinePlus} from 'react-icons/ai'
+import {AiOutlinePlus, AiOutlineCloseCircle} from 'react-icons/ai'
 import {BsSearch} from 'react-icons/bs'
 import {IoMdReturnLeft} from 'react-icons/io'
 
@@ -14,6 +14,7 @@ export default function MyNotes(props) {
     const [username, setUsername] = useState('')
     const [filter,setFilter] = useState([])
     const [search, setSearch] = useState(false)
+    const [searchResult, setSearchResult] = useState('')
     const navigate = useNavigate()
 
     const addNote = () => {
@@ -22,6 +23,7 @@ export default function MyNotes(props) {
 
     const handleFilter = (e) => {
         const title = e.target.value
+        setSearchResult(title)
         const filtered = allNotes.filter((value) => {
             return value.title.toLowerCase().includes(title)
         })
@@ -32,6 +34,11 @@ export default function MyNotes(props) {
             setFilter(filtered)
             setSearch(true)
         }
+    }
+
+    const clearSearchbar = () => {
+        setFilter([])
+        setSearchResult('')
     }
 
     const backButton = () => {
@@ -54,9 +61,13 @@ export default function MyNotes(props) {
             <div className='a'>
             <IoMdReturnLeft className='notes-back-icon' onClick={backButton}/>
             <div className='searchbar'>
-                <input type='text' placeholder='Search...' className='searchbar-input' onChange={handleFilter}></input>
+                <input value={searchResult} type='text' placeholder='Search...' className='searchbar-input' onChange={handleFilter}></input>
                 <div className='searchbar-icon'>
+                    {filter.length > 0 ?
+                    <AiOutlineCloseCircle onClick={clearSearchbar}/>
+                :
                     <BsSearch/>
+                }
                 </div>
             </div>
             <button onClick={addNote} className='addnote-button'><AiOutlinePlus className='addnote-icon'/></button>

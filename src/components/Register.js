@@ -16,6 +16,9 @@ export default function Register() {
     const [com, setCom] = useState('')
     const [validError, setValidError] = useState('')
     const [isEmailValid, setIsEmailValid] = useState(false)
+    const [isVisible, setIsVisible] = useState(false)
+    const [isCheckVisible, setIsCheckVisible] = useState(false)
+
     const navigate = useNavigate()
     Axios.defaults.withCredentials = true
 
@@ -39,6 +42,24 @@ export default function Register() {
 
     const backButton = () => {
         navigate("/")
+    }
+
+    const handleVisibility = () => {
+        let a = document.getElementById("password")
+        if(a.type === 'password'){
+            a.type = 'text'
+        }else if(a.type === 'text'){
+            a.type = 'password'
+        }
+    }
+
+    const handleConfirmVisibility = () => {
+        let a = document.getElementById("password-confirm")
+        if(a.type === 'password'){
+            a.type = 'text'
+        }else if(a.type === 'text'){
+            a.type = 'password'
+        }
     }
 
     const registerSubmit = () => {
@@ -75,9 +96,27 @@ export default function Register() {
                 <div className='register-form-input-label'>Username: </div>
                 <input type='text' className='register-form-input' placeholder='Enter your username...' onChange={(e) => setUsername(e.target.value)}></input>
                 <div className='register-form-input-label'>Password: </div>
-                <input type='password' className='register-form-input' placeholder='Enter your password...' onChange={(e) => setPassword(e.target.value)}></input>
+                <div className='pass-management'>
+                <span className='eye-icon' onClick={()=>setIsVisible(!isVisible)}>
+                    {isVisible ?
+                            <AiOutlineEyeInvisible onClick={handleVisibility}/>
+                        :
+                            <AiOutlineEye onClick={handleVisibility}/>
+                    }
+                </span>
+                <input id='password' type='password' className='register-form-input' placeholder='Enter your password...' onChange={(e) => setPassword(e.target.value)}></input>
+                </div>
                 <div className='register-form-input-label'>Confirm your password: </div>
-                <input type='password' className='register-form-input' placeholder='Confirm your password...' onChange={(e) => setConfirm(e.target.value)}></input>
+                <div className='pass-management'>
+                <span className='eye-icon' onClick={()=>setIsCheckVisible(!isCheckVisible)}>
+                    {isCheckVisible ?
+                            <AiOutlineEyeInvisible onClick={handleConfirmVisibility}/>
+                        :
+                            <AiOutlineEye onClick={handleConfirmVisibility}/>
+                    }
+                </span>
+                <input id='password-confirm' type='password' className='register-form-input' placeholder='Confirm your password...' onChange={(e) => setConfirm(e.target.value)}></input>
+                </div>
                 <div className='register-form-input-label'>Email: </div>
                 <input type='text' className='register-form-input' placeholder='Enter your email...' onChange={handleChange}></input>
                 <div className='register-form-valid-text'>{validError}</div>

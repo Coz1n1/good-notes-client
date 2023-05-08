@@ -25,7 +25,7 @@ export default function Profile(props) {
     
   return (
     <>
-        <div className='main'>
+        <div className='profile-section'>
             <div className='h'>
                 <div className='h-icon' onClick={backButton}>
                 <IoMdReturnLeft/>

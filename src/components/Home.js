@@ -14,10 +14,10 @@ export default function Home() {
         </div>
         <div className='main-screen'>
           <div className='main-screen-headers'>
-            <h2>All</h2>
-            <h2>In</h2>
-            <h2>One</h2>
-            <h2>Place</h2>
+            <span className='span-text'>All</span>
+            <span className='span-text'>In</span>
+            <span className='span-text'>One</span>
+            <span className='span-text'>Place</span>
           </div>
           <div className='main-image-section'>
             <div className='main-image-dot'>
