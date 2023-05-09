@@ -67,7 +67,7 @@ export default function Register() {
         if (username !== '' && password !== '' && email !== '' && confirm !== '') {
             if (password === confirm) {
                 if (isEmailValid) {
-                    Axios.post('http://localhost:3002/register', {
+                    Axios.post('https://good-notes-server.herokuapp.com/register', {
                         username: username,
                         password: password,
                         email: email,

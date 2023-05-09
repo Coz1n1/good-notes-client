@@ -12,7 +12,7 @@ export default function AddNote(props) {
 
     const addNote = () => {
         console.log(props.name + ' ' + title + ' ' + content)
-        Axios.post('http://localhost:3002/addnote', {
+        Axios.post('https://good-notes-server.herokuapp.com/addnote', {
             username: props.name,
             title: title,
             content: content,

@@ -7,7 +7,7 @@ export default function Note(props) {
 
     const deleteItem = () => {
         console.log(props.identity)
-        Axios.post('http://localhost:3002/deleteItem', {
+        Axios.post('https://good-notes-server.herokuapp.com/deleteItem', {
             id: props.identity
         }
         ).then((response)=> {

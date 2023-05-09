@@ -31,7 +31,7 @@ export default function Login() {
 
     const loginSubmit = () => {
         if (username !== '' && password !== '') {
-            Axios.post('http://localhost:3002/login',
+            Axios.post('https://good-notes-server.herokuapp.com/login',
                 {
                     username: username,
                     password: password,
