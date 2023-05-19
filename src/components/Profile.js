@@ -15,7 +15,7 @@ export default function Profile(props) {
     }
 
     useEffect(()=> {
-        Axios.post('https://good-notes-server.herokuapp.com/userInfo', {
+        Axios.post('https://good-notes-server-production.up.railway.app/userInfo', {
             username: props.name
         }).then((response) => {
             console.log(response.data)

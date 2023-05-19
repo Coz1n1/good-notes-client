@@ -6,9 +6,7 @@ import { AiOutlineRight, AiOutlineEyeInvisible, AiOutlineEye, AiOutlineQuestionC
 import Axios from 'axios'
 import {IoMdReturnLeft} from 'react-icons/io'
 
-
 export default function Register() {
-
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [email, setEmail] = useState('')
@@ -67,7 +65,7 @@ export default function Register() {
         if (username !== '' && password !== '' && email !== '' && confirm !== '') {
             if (password === confirm) {
                 if (isEmailValid) {
-                    Axios.post('https://good-notes-server.herokuapp.com/register', {
+                    Axios.post('https://good-notes-server-production.up.railway.app/register', {
                         username: username,
                         password: password,
                         email: email,
