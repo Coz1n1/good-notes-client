@@ -65,7 +65,7 @@ export default function Register() {
         if (username !== '' && password !== '' && email !== '' && confirm !== '') {
             if (password === confirm) {
                 if (isEmailValid) {
-                    Axios.post('https://good-notes-server-production.up.railway.app/register', {
+                    Axios.post('${process.env.REACT_APP_BACKEND_URL}/register', {
                         username: username,
                         password: password,
                         email: email,

@@ -12,7 +12,7 @@ export default function AddNote(props) {
 
     const addNote = () => {
         console.log(props.name + ' ' + title + ' ' + content)
-        Axios.post('https://good-notes-server-production.up.railway.app/addnote', {
+        Axios.post('${process.env.REACT_APP_BACKEND_URL}/addnote', {
             username: props.name,
             title: title,
             content: content,
