@@ -7,7 +7,7 @@ export default function Note(props) {
 
     const deleteItem = () => {
         console.log(props.identity)
-        Axios.post('${process.env.REACT_APP_BACKEND_URL}/deleteItem', {
+        Axios.post('https://good-notes-server-production.up.railway.app/deleteItem', {
             id: props.identity
         }
         ).then((response)=> {

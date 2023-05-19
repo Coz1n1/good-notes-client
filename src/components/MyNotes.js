@@ -47,7 +47,7 @@ export default function MyNotes(props) {
 
     useEffect(() => {
         setUsername(props.name)
-        Axios.post('${process.env.REACT_APP_BACKEND_URL}/getAll', {
+        Axios.post('https://good-notes-server-production.up.railway.app/getAll', {
             username: username,
         }).then((response) => {
             console.log(response.data.rows.length)

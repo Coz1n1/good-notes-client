@@ -31,7 +31,7 @@ export default function Login() {
 
     const loginSubmit = () => {
         if (username !== '' && password !== '') {
-            Axios.post('${process.env.REACT_APP_BACKEND_URL}/login',
+            Axios.post('https://good-notes-server-production.up.railway.app/login',
                 {
                     username: username,
                     password: password,
