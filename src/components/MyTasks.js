@@ -4,11 +4,18 @@ import { useState } from 'react'
 import {MdDoneOutline} from 'react-icons/md'
 import { AiFillEdit } from 'react-icons/ai'
 import '../styles/mytasks.css'
+import { useNavigate } from 'react-router-dom'
+import {IoMdReturnLeft} from 'react-icons/io'
 
 export default function MyTasks(props) {
   const [allTasks, setAllTasks] = useState([])
   const [task, setTask] = useState('')
   const [update, setUpdate] = useState('')
+  const navigate = useNavigate()
+
+  const backButton = () => {
+    navigate("/home")
+  }
 
   const handleAdd = () => {
     console.log(task)
@@ -51,6 +58,7 @@ export default function MyTasks(props) {
     <Navbar user={props.name} />
     <div className='mytasks-content'>
       <div className='addtask-content'>
+        <IoMdReturnLeft className='notes-back-icon' onClick={backButton}/>
         {update && update ?
         <>
         <input value={update && update.title} type='text' placeholder='Edit Task...' onChange={(e)=>handleEdit(e)}></input>
