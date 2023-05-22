@@ -29,7 +29,7 @@ export default function Navbar(props) {
             <nav className='navbar'>
                 <div className='navbar-header'>
                     <div className='navbar-header-title'>
-                        <NavLink to='/' className={({ isActive }) =>
+                        <NavLink to='/' id='navHeader' className={({ isActive }) =>
                             "navbar-header-title-content" + (isActive ? " activated" : "")
                         }><SlNote className='navbar-header-icon' />Good Notes</NavLink>
                     </div>

@@ -13,6 +13,8 @@ export default function MyTasks(props) {
   const [update, setUpdate] = useState('')
   const navigate = useNavigate()
 
+  document.getElementById('navHeader').style.display = none;
+
   const backButton = () => {
     navigate("/home")
   }
